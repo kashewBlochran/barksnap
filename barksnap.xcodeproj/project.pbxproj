@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CCC6BAFDE51BA02C160F7A8 /* Pods_barksnap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */; };
+		C90D069A1E25B50A00B4B171 /* buttonUp.100.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D06991E25B50A00B4B171 /* buttonUp.100.png */; };
+		C90D069C1E272B3300B4B171 /* barksnap.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D069B1E272B3300B4B171 /* barksnap.png */; };
+		C90D069E1E272EDA00B4B171 /* barksnap2.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D069D1E272EDA00B4B171 /* barksnap2.png */; };
+		C90D06A01E272FB400B4B171 /* barksnap3.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D069F1E272FB400B4B171 /* barksnap3.png */; };
+		C90D06A41E27357700B4B171 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */; };
+		C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955691E246FB000FA80F2 /* ImageViewController.swift */; };
+		C939556C1E2487B000FA80F2 /* whistle.wav in Resources */ = {isa = PBXBuildFile; fileRef = C939556B1E2487B000FA80F2 /* whistle.wav */; };
+		C93E46481EAD0B830058CC58 /* amazonView.html in Resources */ = {isa = PBXBuildFile; fileRef = C93E46471EAD0B820058CC58 /* amazonView.html */; };
+		C9499B1F1E246C5F0038C948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B1E1E246C5F0038C948 /* AppDelegate.swift */; };
+		C9499B211E246C5F0038C948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B201E246C5F0038C948 /* ViewController.swift */; };
+		C9499B241E246C5F0038C948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9499B221E246C5F0038C948 /* Main.storyboard */; };
+		C9499B261E246C5F0038C948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9499B251E246C5F0038C948 /* Assets.xcassets */; };
+		C9499B291E246C5F0038C948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9499B271E246C5F0038C948 /* LaunchScreen.storyboard */; };
+		C9499B341E246C600038C948 /* barksnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B331E246C600038C948 /* barksnapTests.swift */; };
+		C9499B3F1E246C600038C948 /* barksnapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B3E1E246C600038C948 /* barksnapUITests.swift */; };
+		C952349D1E7ECAFB0027C1FE /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = C952348F1E7ECAFB0027C1FE /* Back.png */; };
+		C952349E1E7ECAFB0027C1FE /* Barksnap_B_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234901E7ECAFB0027C1FE /* Barksnap_B_Icon.png */; };
+		C952349F1E7ECAFB0027C1FE /* Barksnap_Logo_URL.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234911E7ECAFB0027C1FE /* Barksnap_Logo_URL.png */; };
+		C95234A01E7ECAFB0027C1FE /* Barksnap_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234921E7ECAFB0027C1FE /* Barksnap_Logo.png */; };
+		C95234A11E7ECAFB0027C1FE /* Camera Flip.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234931E7ECAFB0027C1FE /* Camera Flip.png */; };
+		C95234A21E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234941E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png */; };
+		C95234A31E7ECAFB0027C1FE /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234951E7ECAFB0027C1FE /* Info.png */; };
+		C95234A41E7ECAFB0027C1FE /* Save.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234961E7ECAFB0027C1FE /* Save.png */; };
+		C95234A51E7ECAFB0027C1FE /* SavedCheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234971E7ECAFB0027C1FE /* SavedCheckMark.png */; };
+		C95234A61E7ECAFB0027C1FE /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234981E7ECAFB0027C1FE /* Share.png */; };
+		C95234A71E7ECAFB0027C1FE /* Shutter_Press.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234991E7ECAFB0027C1FE /* Shutter_Press.png */; };
+		C95234A81E7ECAFB0027C1FE /* Shutter.png in Resources */ = {isa = PBXBuildFile; fileRef = C952349A1E7ECAFB0027C1FE /* Shutter.png */; };
+		C95234A91E7ECAFB0027C1FE /* Treats.png in Resources */ = {isa = PBXBuildFile; fileRef = C952349B1E7ECAFB0027C1FE /* Treats.png */; };
+		C95234AA1E7ECAFB0027C1FE /* wavelengths.png in Resources */ = {isa = PBXBuildFile; fileRef = C952349C1E7ECAFB0027C1FE /* wavelengths.png */; };
+		C9C5EBB71E7ED7A5009116CC /* 0000_1 - Open.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBB61E7ED7A5009116CC /* 0000_1 - Open.jpg */; };
+		C9C5EBBB1E7EE4FE009116CC /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5EBBA1E7EE4FE009116CC /* HelpViewController.swift */; };
+		C9C5EBBF1E7EF25A009116CC /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5EBBE1E7EF25A009116CC /* OnboardViewController.swift */; };
+		C9C5EBC21E7F03B3009116CC /* Barksnap_Logo_URL_large.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC01E7F03B2009116CC /* Barksnap_Logo_URL_large.png */; };
+		C9C5EBC31E7F03B3009116CC /* Next_White.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC11E7F03B3009116CC /* Next_White.png */; };
+		C9C5EBC61E7F08DF009116CC /* 0001_2 - Onboarding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC41E7F08DF009116CC /* 0001_2 - Onboarding.jpg */; };
+		C9C5EBC71E7F08DF009116CC /* 0007_7 - Help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC51E7F08DF009116CC /* 0007_7 - Help.jpg */; };
+		C9C5EBC91E7F136A009116CC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C5EBC81E7F136A009116CC /* Social.framework */; };
+		C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9C8DC151E65E316006DBF7F /* StartApp.bundle */; };
+		C9C8DC181E65E316006DBF7F /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC161E65E316006DBF7F /* StartApp.framework */; };
+		C9C8DC1A1E65E373006DBF7F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC191E65E373006DBF7F /* CoreTelephony.framework */; };
+		C9C8DC1C1E65E37E006DBF7F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC1B1E65E37E006DBF7F /* SystemConfiguration.framework */; };
+		C9C8DC1E1E65E388006DBF7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC1D1E65E388006DBF7F /* CoreGraphics.framework */; };
+		C9C8DC201E65E390006DBF7F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC1F1E65E390006DBF7F /* StoreKit.framework */; };
+		C9C8DC221E65E399006DBF7F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC211E65E399006DBF7F /* AdSupport.framework */; };
+		C9C8DC241E65E3A3006DBF7F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC231E65E3A3006DBF7F /* QuartzCore.framework */; };
+		C9C8DC261E65E3AB006DBF7F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC251E65E3AB006DBF7F /* CoreMedia.framework */; };
+		C9C8DC281E65E3B6006DBF7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */; };
+		C9C8DC2A1E65E3CF006DBF7F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC291E65E3CF006DBF7F /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9499B301E246C600038C948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9499B131E246C5E0038C948 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9499B1A1E246C5F0038C948;
+			remoteInfo = barksnap;
+		};
+		C9499B3B1E246C600038C948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9499B131E246C5E0038C948 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9499B1A1E246C5F0038C948;
+			remoteInfo = barksnap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21564BAE441131ADDEB68401 /* Pods-barksnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.release.xcconfig"; sourceTree = "<group>"; };
+		A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_barksnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C90D06991E25B50A00B4B171 /* buttonUp.100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonUp.100.png; sourceTree = "<group>"; };
+		C90D069B1E272B3300B4B171 /* barksnap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barksnap.png; sourceTree = "<group>"; };
+		C90D069D1E272EDA00B4B171 /* barksnap2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barksnap2.png; sourceTree = "<group>"; };
+		C90D069F1E272FB400B4B171 /* barksnap3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barksnap3.png; sourceTree = "<group>"; };
+		C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		C93955691E246FB000FA80F2 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		C939556B1E2487B000FA80F2 /* whistle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistle.wav; sourceTree = "<group>"; };
+		C93E46471EAD0B820058CC58 /* amazonView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = amazonView.html; sourceTree = "<group>"; };
+		C9499B1B1E246C5F0038C948 /* barksnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barksnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9499B1E1E246C5F0038C948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9499B201E246C5F0038C948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9499B231E246C5F0038C948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9499B251E246C5F0038C948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9499B281E246C5F0038C948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9499B2A1E246C5F0038C948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9499B2F1E246C600038C948 /* barksnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barksnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9499B331E246C600038C948 /* barksnapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barksnapTests.swift; sourceTree = "<group>"; };
+		C9499B351E246C600038C948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9499B3A1E246C600038C948 /* barksnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barksnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9499B3E1E246C600038C948 /* barksnapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barksnapUITests.swift; sourceTree = "<group>"; };
+		C9499B401E246C600038C948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C952348F1E7ECAFB0027C1FE /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Back.png"; sourceTree = "<group>"; };
+		C95234901E7ECAFB0027C1FE /* Barksnap_B_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_B_Icon.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Barksnap_B_Icon.png"; sourceTree = "<group>"; };
+		C95234911E7ECAFB0027C1FE /* Barksnap_Logo_URL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_Logo_URL.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Barksnap_Logo_URL.png"; sourceTree = "<group>"; };
+		C95234921E7ECAFB0027C1FE /* Barksnap_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_Logo.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Barksnap_Logo.png"; sourceTree = "<group>"; };
+		C95234931E7ECAFB0027C1FE /* Camera Flip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Camera Flip.png"; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Camera Flip.png"; sourceTree = "<group>"; };
+		C95234941E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png.png"; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Icon-App-83.5x83.5@2x.png.png"; sourceTree = "<group>"; };
+		C95234951E7ECAFB0027C1FE /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Info.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Info.png"; sourceTree = "<group>"; };
+		C95234961E7ECAFB0027C1FE /* Save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Save.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Save.png"; sourceTree = "<group>"; };
+		C95234971E7ECAFB0027C1FE /* SavedCheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SavedCheckMark.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/SavedCheckMark.png"; sourceTree = "<group>"; };
+		C95234981E7ECAFB0027C1FE /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Share.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Share.png"; sourceTree = "<group>"; };
+		C95234991E7ECAFB0027C1FE /* Shutter_Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shutter_Press.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Shutter_Press.png"; sourceTree = "<group>"; };
+		C952349A1E7ECAFB0027C1FE /* Shutter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shutter.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Shutter.png"; sourceTree = "<group>"; };
+		C952349B1E7ECAFB0027C1FE /* Treats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Treats.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Treats.png"; sourceTree = "<group>"; };
+		C952349C1E7ECAFB0027C1FE /* wavelengths.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wavelengths.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/wavelengths.png"; sourceTree = "<group>"; };
+		C9C5EBB61E7ED7A5009116CC /* 0000_1 - Open.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "0000_1 - Open.jpg"; path = "../../../../Downloads/drive-download-20170319T141449Z-001/0000_1 - Open.jpg"; sourceTree = "<group>"; };
+		C9C5EBBA1E7EE4FE009116CC /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		C9C5EBBE1E7EF25A009116CC /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		C9C5EBC01E7F03B2009116CC /* Barksnap_Logo_URL_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_Logo_URL_large.png; path = "../../../../Downloads/drive-download-20170319T182120Z-001/Barksnap_Logo_URL_large.png"; sourceTree = "<group>"; };
+		C9C5EBC11E7F03B3009116CC /* Next_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Next_White.png; path = "../../../../Downloads/drive-download-20170319T182120Z-001/Next_White.png"; sourceTree = "<group>"; };
+		C9C5EBC41E7F08DF009116CC /* 0001_2 - Onboarding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "0001_2 - Onboarding.jpg"; path = "../../../../Downloads/drive-download-20170319T184308Z-001/0001_2 - Onboarding.jpg"; sourceTree = "<group>"; };
+		C9C5EBC51E7F08DF009116CC /* 0007_7 - Help.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "0007_7 - Help.jpg"; path = "../../../../Downloads/drive-download-20170319T184308Z-001/0007_7 - Help.jpg"; sourceTree = "<group>"; };
+		C9C5EBC81E7F136A009116CC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C9C8DC151E65E316006DBF7F /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		C9C8DC161E65E316006DBF7F /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		C9C8DC191E65E373006DBF7F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C9C8DC1B1E65E37E006DBF7F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9C8DC1D1E65E388006DBF7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9C8DC1F1E65E390006DBF7F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C9C8DC211E65E399006DBF7F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C9C8DC231E65E3A3006DBF7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C9C8DC251E65E3AB006DBF7F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C9C8DC291E65E3CF006DBF7F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C9C8DC2D1E65E80E006DBF7F /* barksnap-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "barksnap-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1D3563D3A207378DD1A2794 /* Pods-barksnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9499B181E246C5F0038C948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C5EBC91E7F136A009116CC /* Social.framework in Frameworks */,
+				C9C8DC2A1E65E3CF006DBF7F /* libz.tbd in Frameworks */,
+				C9C8DC281E65E3B6006DBF7F /* AVFoundation.framework in Frameworks */,
+				C9C8DC261E65E3AB006DBF7F /* CoreMedia.framework in Frameworks */,
+				C9C8DC241E65E3A3006DBF7F /* QuartzCore.framework in Frameworks */,
+				C9C8DC221E65E399006DBF7F /* AdSupport.framework in Frameworks */,
+				C9C8DC201E65E390006DBF7F /* StoreKit.framework in Frameworks */,
+				C9C8DC1E1E65E388006DBF7F /* CoreGraphics.framework in Frameworks */,
+				C9C8DC1C1E65E37E006DBF7F /* SystemConfiguration.framework in Frameworks */,
+				C9C8DC1A1E65E373006DBF7F /* CoreTelephony.framework in Frameworks */,
+				1CCC6BAFDE51BA02C160F7A8 /* Pods_barksnap.framework in Frameworks */,
+				C9C8DC181E65E316006DBF7F /* StartApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9499B2C1E246C600038C948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9499B371E246C600038C948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9499B121E246C5E0038C948 = {
+			isa = PBXGroup;
+			children = (
+				C9C8DC2D1E65E80E006DBF7F /* barksnap-Bridging-Header.h */,
+				C9C8DC151E65E316006DBF7F /* StartApp.bundle */,
+				C9C8DC161E65E316006DBF7F /* StartApp.framework */,
+				C9499B1D1E246C5F0038C948 /* barksnap */,
+				C9499B321E246C600038C948 /* barksnapTests */,
+				C9499B3D1E246C600038C948 /* barksnapUITests */,
+				C9499B1C1E246C5F0038C948 /* Products */,
+				E82E6A3BA4D28DD14B82BEB8 /* Pods */,
+				DFB4EA2F4FF0A8670F79513F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9499B1C1E246C5F0038C948 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9499B1B1E246C5F0038C948 /* barksnap.app */,
+				C9499B2F1E246C600038C948 /* barksnapTests.xctest */,
+				C9499B3A1E246C600038C948 /* barksnapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9499B1D1E246C5F0038C948 /* barksnap */ = {
+			isa = PBXGroup;
+			children = (
+				C9C5EBC41E7F08DF009116CC /* 0001_2 - Onboarding.jpg */,
+				C9C5EBC51E7F08DF009116CC /* 0007_7 - Help.jpg */,
+				C9C5EBC01E7F03B2009116CC /* Barksnap_Logo_URL_large.png */,
+				C9C5EBC11E7F03B3009116CC /* Next_White.png */,
+				C9C5EBB61E7ED7A5009116CC /* 0000_1 - Open.jpg */,
+				C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */,
+				C90D069F1E272FB400B4B171 /* barksnap3.png */,
+				C90D069D1E272EDA00B4B171 /* barksnap2.png */,
+				C90D069B1E272B3300B4B171 /* barksnap.png */,
+				C90D06991E25B50A00B4B171 /* buttonUp.100.png */,
+				C939556B1E2487B000FA80F2 /* whistle.wav */,
+				C9499B1E1E246C5F0038C948 /* AppDelegate.swift */,
+				C9499B201E246C5F0038C948 /* ViewController.swift */,
+				C9499B221E246C5F0038C948 /* Main.storyboard */,
+				C9499B251E246C5F0038C948 /* Assets.xcassets */,
+				C952348F1E7ECAFB0027C1FE /* Back.png */,
+				C95234901E7ECAFB0027C1FE /* Barksnap_B_Icon.png */,
+				C95234911E7ECAFB0027C1FE /* Barksnap_Logo_URL.png */,
+				C95234921E7ECAFB0027C1FE /* Barksnap_Logo.png */,
+				C95234931E7ECAFB0027C1FE /* Camera Flip.png */,
+				C95234941E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png */,
+				C95234951E7ECAFB0027C1FE /* Info.png */,
+				C95234961E7ECAFB0027C1FE /* Save.png */,
+				C95234971E7ECAFB0027C1FE /* SavedCheckMark.png */,
+				C95234981E7ECAFB0027C1FE /* Share.png */,
+				C95234991E7ECAFB0027C1FE /* Shutter_Press.png */,
+				C952349A1E7ECAFB0027C1FE /* Shutter.png */,
+				C952349B1E7ECAFB0027C1FE /* Treats.png */,
+				C952349C1E7ECAFB0027C1FE /* wavelengths.png */,
+				C9499B271E246C5F0038C948 /* LaunchScreen.storyboard */,
+				C9499B2A1E246C5F0038C948 /* Info.plist */,
+				C93955691E246FB000FA80F2 /* ImageViewController.swift */,
+				C9C5EBBA1E7EE4FE009116CC /* HelpViewController.swift */,
+				C9C5EBBE1E7EF25A009116CC /* OnboardViewController.swift */,
+				C93E46471EAD0B820058CC58 /* amazonView.html */,
+			);
+			path = barksnap;
+			sourceTree = "<group>";
+		};
+		C9499B321E246C600038C948 /* barksnapTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9499B331E246C600038C948 /* barksnapTests.swift */,
+				C9499B351E246C600038C948 /* Info.plist */,
+			);
+			path = barksnapTests;
+			sourceTree = "<group>";
+		};
+		C9499B3D1E246C600038C948 /* barksnapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9499B3E1E246C600038C948 /* barksnapUITests.swift */,
+				C9499B401E246C600038C948 /* Info.plist */,
+			);
+			path = barksnapUITests;
+			sourceTree = "<group>";
+		};
+		DFB4EA2F4FF0A8670F79513F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9C5EBC81E7F136A009116CC /* Social.framework */,
+				C9C8DC291E65E3CF006DBF7F /* libz.tbd */,
+				C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */,
+				C9C8DC251E65E3AB006DBF7F /* CoreMedia.framework */,
+				C9C8DC231E65E3A3006DBF7F /* QuartzCore.framework */,
+				C9C8DC211E65E399006DBF7F /* AdSupport.framework */,
+				C9C8DC1F1E65E390006DBF7F /* StoreKit.framework */,
+				C9C8DC1D1E65E388006DBF7F /* CoreGraphics.framework */,
+				C9C8DC1B1E65E37E006DBF7F /* SystemConfiguration.framework */,
+				C9C8DC191E65E373006DBF7F /* CoreTelephony.framework */,
+				A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E82E6A3BA4D28DD14B82BEB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1D3563D3A207378DD1A2794 /* Pods-barksnap.debug.xcconfig */,
+				21564BAE441131ADDEB68401 /* Pods-barksnap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9499B1A1E246C5F0038C948 /* barksnap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9499B431E246C600038C948 /* Build configuration list for PBXNativeTarget "barksnap" */;
+			buildPhases = (
+				CBC476735E09A41AE5D2CA7A /* [CP] Check Pods Manifest.lock */,
+				C9499B171E246C5F0038C948 /* Sources */,
+				C9499B181E246C5F0038C948 /* Frameworks */,
+				C9499B191E246C5F0038C948 /* Resources */,
+				458FBF47AE9D588489CB8BAA /* [CP] Embed Pods Frameworks */,
+				E4E07253A280850162BCF12E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = barksnap;
+			productName = barksnap;
+			productReference = C9499B1B1E246C5F0038C948 /* barksnap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9499B2E1E246C600038C948 /* barksnapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9499B461E246C600038C948 /* Build configuration list for PBXNativeTarget "barksnapTests" */;
+			buildPhases = (
+				C9499B2B1E246C600038C948 /* Sources */,
+				C9499B2C1E246C600038C948 /* Frameworks */,
+				C9499B2D1E246C600038C948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9499B311E246C600038C948 /* PBXTargetDependency */,
+			);
+			name = barksnapTests;
+			productName = barksnapTests;
+			productReference = C9499B2F1E246C600038C948 /* barksnapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9499B391E246C600038C948 /* barksnapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9499B491E246C600038C948 /* Build configuration list for PBXNativeTarget "barksnapUITests" */;
+			buildPhases = (
+				C9499B361E246C600038C948 /* Sources */,
+				C9499B371E246C600038C948 /* Frameworks */,
+				C9499B381E246C600038C948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9499B3C1E246C600038C948 /* PBXTargetDependency */,
+			);
+			name = barksnapUITests;
+			productName = barksnapUITests;
+			productReference = C9499B3A1E246C600038C948 /* barksnapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9499B131E246C5E0038C948 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = BoulevardLabs;
+				TargetAttributes = {
+					C9499B1A1E246C5F0038C948 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HW39442X24;
+						ProvisioningStyle = Automatic;
+					};
+					C9499B2E1E246C600038C948 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HW39442X24;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C9499B1A1E246C5F0038C948;
+					};
+					C9499B391E246C600038C948 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = HW39442X24;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C9499B1A1E246C5F0038C948;
+					};
+				};
+			};
+			buildConfigurationList = C9499B161E246C5E0038C948 /* Build configuration list for PBXProject "barksnap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9499B121E246C5E0038C948;
+			productRefGroup = C9499B1C1E246C5F0038C948 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9499B1A1E246C5F0038C948 /* barksnap */,
+				C9499B2E1E246C600038C948 /* barksnapTests */,
+				C9499B391E246C600038C948 /* barksnapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9499B191E246C5F0038C948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95234A41E7ECAFB0027C1FE /* Save.png in Resources */,
+				C9499B291E246C5F0038C948 /* LaunchScreen.storyboard in Resources */,
+				C90D069C1E272B3300B4B171 /* barksnap.png in Resources */,
+				C9499B261E246C5F0038C948 /* Assets.xcassets in Resources */,
+				C9499B241E246C5F0038C948 /* Main.storyboard in Resources */,
+				C95234A01E7ECAFB0027C1FE /* Barksnap_Logo.png in Resources */,
+				C95234A21E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png in Resources */,
+				C90D06A41E27357700B4B171 /* iTunesArtwork@2x.png in Resources */,
+				C939556C1E2487B000FA80F2 /* whistle.wav in Resources */,
+				C90D06A01E272FB400B4B171 /* barksnap3.png in Resources */,
+				C95234A91E7ECAFB0027C1FE /* Treats.png in Resources */,
+				C90D069E1E272EDA00B4B171 /* barksnap2.png in Resources */,
+				C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */,
+				C9C5EBC31E7F03B3009116CC /* Next_White.png in Resources */,
+				C95234A31E7ECAFB0027C1FE /* Info.png in Resources */,
+				C952349E1E7ECAFB0027C1FE /* Barksnap_B_Icon.png in Resources */,
+				C952349D1E7ECAFB0027C1FE /* Back.png in Resources */,
+				C9C5EBC71E7F08DF009116CC /* 0007_7 - Help.jpg in Resources */,
+				C952349F1E7ECAFB0027C1FE /* Barksnap_Logo_URL.png in Resources */,
+				C90D069A1E25B50A00B4B171 /* buttonUp.100.png in Resources */,
+				C95234AA1E7ECAFB0027C1FE /* wavelengths.png in Resources */,
+				C9C5EBC21E7F03B3009116CC /* Barksnap_Logo_URL_large.png in Resources */,
+				C95234A11E7ECAFB0027C1FE /* Camera Flip.png in Resources */,
+				C9C5EBB71E7ED7A5009116CC /* 0000_1 - Open.jpg in Resources */,
+				C95234A71E7ECAFB0027C1FE /* Shutter_Press.png in Resources */,
+				C9C5EBC61E7F08DF009116CC /* 0001_2 - Onboarding.jpg in Resources */,
+				C95234A81E7ECAFB0027C1FE /* Shutter.png in Resources */,
+				C95234A51E7ECAFB0027C1FE /* SavedCheckMark.png in Resources */,
+				C95234A61E7ECAFB0027C1FE /* Share.png in Resources */,
+				C93E46481EAD0B830058CC58 /* amazonView.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9499B2D1E246C600038C948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9499B381E246C600038C948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		458FBF47AE9D588489CB8BAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-barksnap/Pods-barksnap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC476735E09A41AE5D2CA7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4E07253A280850162BCF12E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-barksnap/Pods-barksnap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9499B171E246C5F0038C948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C5EBBF1E7EF25A009116CC /* OnboardViewController.swift in Sources */,
+				C9499B211E246C5F0038C948 /* ViewController.swift in Sources */,
+				C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */,
+				C9499B1F1E246C5F0038C948 /* AppDelegate.swift in Sources */,
+				C9C5EBBB1E7EE4FE009116CC /* HelpViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9499B2B1E246C600038C948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9499B341E246C600038C948 /* barksnapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9499B361E246C600038C948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9499B3F1E246C600038C948 /* barksnapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9499B311E246C600038C948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9499B1A1E246C5F0038C948 /* barksnap */;
+			targetProxy = C9499B301E246C600038C948 /* PBXContainerItemProxy */;
+		};
+		C9499B3C1E246C600038C948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9499B1A1E246C5F0038C948 /* barksnap */;
+			targetProxy = C9499B3B1E246C600038C948 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9499B221E246C5F0038C948 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9499B231E246C5F0038C948 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9499B271E246C5F0038C948 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9499B281E246C5F0038C948 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9499B411E246C600038C948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9499B421E246C600038C948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9499B441E246C600038C948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D3563D3A207378DD1A2794 /* Pods-barksnap.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HW39442X24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = barksnap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "barksnap-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C9499B451E246C600038C948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21564BAE441131ADDEB68401 /* Pods-barksnap.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HW39442X24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = barksnap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "barksnap-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C9499B471E246C600038C948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HW39442X24;
+				INFOPLIST_FILE = barksnapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/barksnap.app/barksnap";
+			};
+			name = Debug;
+		};
+		C9499B481E246C600038C948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HW39442X24;
+				INFOPLIST_FILE = barksnapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/barksnap.app/barksnap";
+			};
+			name = Release;
+		};
+		C9499B4A1E246C600038C948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = HW39442X24;
+				INFOPLIST_FILE = barksnapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = barksnap;
+			};
+			name = Debug;
+		};
+		C9499B4B1E246C600038C948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = HW39442X24;
+				INFOPLIST_FILE = barksnapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boulevardlabs.barksnapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = barksnap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9499B161E246C5E0038C948 /* Build configuration list for PBXProject "barksnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9499B411E246C600038C948 /* Debug */,
+				C9499B421E246C600038C948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9499B431E246C600038C948 /* Build configuration list for PBXNativeTarget "barksnap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9499B441E246C600038C948 /* Debug */,
+				C9499B451E246C600038C948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9499B461E246C600038C948 /* Build configuration list for PBXNativeTarget "barksnapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9499B471E246C600038C948 /* Debug */,
+				C9499B481E246C600038C948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9499B491E246C600038C948 /* Build configuration list for PBXNativeTarget "barksnapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9499B4A1E246C600038C948 /* Debug */,
+				C9499B4B1E246C600038C948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9499B131E246C5E0038C948 /* Project object */;
+}
