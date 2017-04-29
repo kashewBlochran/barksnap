@@ -9,12 +9,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nexa_Free_Bold.otf">
+            <string>NexaBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="dsO-jj-70R">
             <objects>
                 <navigationController id="0FP-pq-qJp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JlS-1r-RHb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JlS-1r-RHb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -25,6 +30,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4j-y3-3Uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-846" y="140"/>
+        </scene>
+        <!--Bootstrap View Controller-->
+        <scene sceneID="9Tt-V1-UR2">
+            <objects>
+                <viewController id="JYq-MA-ggN" customClass="bootstrapViewController" customModule="barksnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1iv-A5-dzI"/>
+                        <viewControllerLayoutGuide type="bottom" id="4dG-ew-K1A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cNj-qN-0QC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial Setup " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzN-41-bFZ">
+                                <rect key="frame" x="77" y="102" width="222" height="38"/>
+                                <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYa-ls-eUM">
+                                <rect key="frame" x="86" y="184" width="202" height="159"/>
+                                <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196078431371" green="0.54509803921568623" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HYa-ls-eUM" firstAttribute="centerX" secondItem="cNj-qN-0QC" secondAttribute="centerX" id="B51-Gm-6At"/>
+                            <constraint firstItem="rzN-41-bFZ" firstAttribute="centerX" secondItem="cNj-qN-0QC" secondAttribute="centerX" id="DKk-0L-DgP"/>
+                            <constraint firstItem="rzN-41-bFZ" firstAttribute="top" secondItem="1iv-A5-dzI" secondAttribute="bottom" constant="82" id="Eya-ue-Wxn"/>
+                            <constraint firstItem="HYa-ls-eUM" firstAttribute="leading" secondItem="cNj-qN-0QC" secondAttribute="leadingMargin" constant="70" id="ILr-Ln-THB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HYa-ls-eUM" secondAttribute="trailing" constant="71" id="VPL-RI-6TT"/>
+                            <constraint firstItem="HYa-ls-eUM" firstAttribute="top" secondItem="rzN-41-bFZ" secondAttribute="bottom" constant="44" id="kUU-JY-Ud3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="failText" destination="HYa-ls-eUM" id="wbb-pV-PiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UO5-7L-ZLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775.20000000000005" y="1025.9370314842579"/>
         </scene>
         <!--Onboard View Controller-->
         <scene sceneID="Xjc-o5-45n">
@@ -133,6 +181,7 @@
                         <outlet property="cameraView" destination="pyA-zE-0Ce" id="Ekg-lp-RYU"/>
                         <outlet property="helpText" destination="YCK-xw-IiV" id="OFL-U2-JTL"/>
                         <segue destination="evu-v5-FrU" kind="presentation" identifier="onboard" id="WaL-Gc-6hl"/>
+                        <segue destination="JYq-MA-ggN" kind="presentation" identifier="bootstrapSegue" id="udF-He-YWB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

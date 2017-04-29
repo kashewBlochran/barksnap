@@ -34,6 +34,8 @@
 		C9C8DC261E65E3AB006DBF7F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC251E65E3AB006DBF7F /* CoreMedia.framework */; };
 		C9C8DC281E65E3B6006DBF7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */; };
 		C9C8DC2A1E65E3CF006DBF7F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC291E65E3CF006DBF7F /* libz.tbd */; };
+		C9E749311EB4E6F00090587B /* bootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E749301EB4E6F00090587B /* bootstrapViewController.swift */; };
+		C9E749331EB4F7CA0090587B /* Nexa_Free_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		C9C8DC271E65E3B6006DBF7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C9C8DC291E65E3CF006DBF7F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C9C8DC2D1E65E80E006DBF7F /* barksnap-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "barksnap-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9E749301EB4E6F00090587B /* bootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bootstrapViewController.swift; sourceTree = "<group>"; };
+		C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Nexa_Free_Bold.otf; path = ../../../../Downloads/Nexa_Free_Bold.otf; sourceTree = "<group>"; };
 		E1D3563D3A207378DD1A2794 /* Pods-barksnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,7 @@
 		C9499B1D1E246C5F0038C948 /* barksnap */ = {
 			isa = PBXGroup;
 			children = (
+				C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */,
 				C939556B1E2487B000FA80F2 /* whistle.wav */,
 				C9499B1E1E246C5F0038C948 /* AppDelegate.swift */,
 				C9499B201E246C5F0038C948 /* ViewController.swift */,
@@ -170,6 +175,7 @@
 				C93E46471EAD0B820058CC58 /* amazonView.html */,
 				C9181A601EAD2D6300E1F928 /* WebViewViewController.swift */,
 				C9181A621EAD44BC00E1F928 /* amazonscript.js */,
+				C9E749301EB4E6F00090587B /* bootstrapViewController.swift */,
 			);
 			path = barksnap;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				C9181A631EAD44BC00E1F928 /* amazonscript.js in Resources */,
 				C939556C1E2487B000FA80F2 /* whistle.wav in Resources */,
 				C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */,
+				C9E749331EB4F7CA0090587B /* Nexa_Free_Bold.otf in Resources */,
 				C93E46481EAD0B830058CC58 /* amazonView.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +422,7 @@
 				C9499B211E246C5F0038C948 /* ViewController.swift in Sources */,
 				C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */,
 				C9499B1F1E246C5F0038C948 /* AppDelegate.swift in Sources */,
+				C9E749311EB4E6F00090587B /* bootstrapViewController.swift in Sources */,
 				C9181A611EAD2D6300E1F928 /* WebViewViewController.swift in Sources */,
 				C9C5EBBB1E7EE4FE009116CC /* HelpViewController.swift in Sources */,
 			);
