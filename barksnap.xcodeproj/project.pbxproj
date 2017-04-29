@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CCC6BAFDE51BA02C160F7A8 /* Pods_barksnap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */; };
-		C90D069A1E25B50A00B4B171 /* buttonUp.100.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D06991E25B50A00B4B171 /* buttonUp.100.png */; };
-		C90D069C1E272B3300B4B171 /* barksnap.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D069B1E272B3300B4B171 /* barksnap.png */; };
-		C90D069E1E272EDA00B4B171 /* barksnap2.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D069D1E272EDA00B4B171 /* barksnap2.png */; };
-		C90D06A01E272FB400B4B171 /* barksnap3.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D069F1E272FB400B4B171 /* barksnap3.png */; };
-		C90D06A41E27357700B4B171 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */; };
+		C9181A611EAD2D6300E1F928 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9181A601EAD2D6300E1F928 /* WebViewViewController.swift */; };
+		C9181A631EAD44BC00E1F928 /* amazonscript.js in Resources */ = {isa = PBXBuildFile; fileRef = C9181A621EAD44BC00E1F928 /* amazonscript.js */; };
 		C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955691E246FB000FA80F2 /* ImageViewController.swift */; };
 		C939556C1E2487B000FA80F2 /* whistle.wav in Resources */ = {isa = PBXBuildFile; fileRef = C939556B1E2487B000FA80F2 /* whistle.wav */; };
 		C93E46481EAD0B830058CC58 /* amazonView.html in Resources */ = {isa = PBXBuildFile; fileRef = C93E46471EAD0B820058CC58 /* amazonView.html */; };
@@ -23,27 +20,8 @@
 		C9499B291E246C5F0038C948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9499B271E246C5F0038C948 /* LaunchScreen.storyboard */; };
 		C9499B341E246C600038C948 /* barksnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B331E246C600038C948 /* barksnapTests.swift */; };
 		C9499B3F1E246C600038C948 /* barksnapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9499B3E1E246C600038C948 /* barksnapUITests.swift */; };
-		C952349D1E7ECAFB0027C1FE /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = C952348F1E7ECAFB0027C1FE /* Back.png */; };
-		C952349E1E7ECAFB0027C1FE /* Barksnap_B_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234901E7ECAFB0027C1FE /* Barksnap_B_Icon.png */; };
-		C952349F1E7ECAFB0027C1FE /* Barksnap_Logo_URL.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234911E7ECAFB0027C1FE /* Barksnap_Logo_URL.png */; };
-		C95234A01E7ECAFB0027C1FE /* Barksnap_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234921E7ECAFB0027C1FE /* Barksnap_Logo.png */; };
-		C95234A11E7ECAFB0027C1FE /* Camera Flip.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234931E7ECAFB0027C1FE /* Camera Flip.png */; };
-		C95234A21E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234941E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png */; };
-		C95234A31E7ECAFB0027C1FE /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234951E7ECAFB0027C1FE /* Info.png */; };
-		C95234A41E7ECAFB0027C1FE /* Save.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234961E7ECAFB0027C1FE /* Save.png */; };
-		C95234A51E7ECAFB0027C1FE /* SavedCheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234971E7ECAFB0027C1FE /* SavedCheckMark.png */; };
-		C95234A61E7ECAFB0027C1FE /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234981E7ECAFB0027C1FE /* Share.png */; };
-		C95234A71E7ECAFB0027C1FE /* Shutter_Press.png in Resources */ = {isa = PBXBuildFile; fileRef = C95234991E7ECAFB0027C1FE /* Shutter_Press.png */; };
-		C95234A81E7ECAFB0027C1FE /* Shutter.png in Resources */ = {isa = PBXBuildFile; fileRef = C952349A1E7ECAFB0027C1FE /* Shutter.png */; };
-		C95234A91E7ECAFB0027C1FE /* Treats.png in Resources */ = {isa = PBXBuildFile; fileRef = C952349B1E7ECAFB0027C1FE /* Treats.png */; };
-		C95234AA1E7ECAFB0027C1FE /* wavelengths.png in Resources */ = {isa = PBXBuildFile; fileRef = C952349C1E7ECAFB0027C1FE /* wavelengths.png */; };
-		C9C5EBB71E7ED7A5009116CC /* 0000_1 - Open.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBB61E7ED7A5009116CC /* 0000_1 - Open.jpg */; };
 		C9C5EBBB1E7EE4FE009116CC /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5EBBA1E7EE4FE009116CC /* HelpViewController.swift */; };
 		C9C5EBBF1E7EF25A009116CC /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5EBBE1E7EF25A009116CC /* OnboardViewController.swift */; };
-		C9C5EBC21E7F03B3009116CC /* Barksnap_Logo_URL_large.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC01E7F03B2009116CC /* Barksnap_Logo_URL_large.png */; };
-		C9C5EBC31E7F03B3009116CC /* Next_White.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC11E7F03B3009116CC /* Next_White.png */; };
-		C9C5EBC61E7F08DF009116CC /* 0001_2 - Onboarding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC41E7F08DF009116CC /* 0001_2 - Onboarding.jpg */; };
-		C9C5EBC71E7F08DF009116CC /* 0007_7 - Help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9C5EBC51E7F08DF009116CC /* 0007_7 - Help.jpg */; };
 		C9C5EBC91E7F136A009116CC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C5EBC81E7F136A009116CC /* Social.framework */; };
 		C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9C8DC151E65E316006DBF7F /* StartApp.bundle */; };
 		C9C8DC181E65E316006DBF7F /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC161E65E316006DBF7F /* StartApp.framework */; };
@@ -78,11 +56,8 @@
 /* Begin PBXFileReference section */
 		21564BAE441131ADDEB68401 /* Pods-barksnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.release.xcconfig"; sourceTree = "<group>"; };
 		A004B25B8EF33404C6E66FD1 /* Pods_barksnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_barksnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C90D06991E25B50A00B4B171 /* buttonUp.100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonUp.100.png; sourceTree = "<group>"; };
-		C90D069B1E272B3300B4B171 /* barksnap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barksnap.png; sourceTree = "<group>"; };
-		C90D069D1E272EDA00B4B171 /* barksnap2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barksnap2.png; sourceTree = "<group>"; };
-		C90D069F1E272FB400B4B171 /* barksnap3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barksnap3.png; sourceTree = "<group>"; };
-		C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		C9181A601EAD2D6300E1F928 /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		C9181A621EAD44BC00E1F928 /* amazonscript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = amazonscript.js; sourceTree = "<group>"; };
 		C93955691E246FB000FA80F2 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C939556B1E2487B000FA80F2 /* whistle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistle.wav; sourceTree = "<group>"; };
 		C93E46471EAD0B820058CC58 /* amazonView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = amazonView.html; sourceTree = "<group>"; };
@@ -99,27 +74,8 @@
 		C9499B3A1E246C600038C948 /* barksnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barksnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9499B3E1E246C600038C948 /* barksnapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = barksnapUITests.swift; sourceTree = "<group>"; };
 		C9499B401E246C600038C948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C952348F1E7ECAFB0027C1FE /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Back.png"; sourceTree = "<group>"; };
-		C95234901E7ECAFB0027C1FE /* Barksnap_B_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_B_Icon.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Barksnap_B_Icon.png"; sourceTree = "<group>"; };
-		C95234911E7ECAFB0027C1FE /* Barksnap_Logo_URL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_Logo_URL.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Barksnap_Logo_URL.png"; sourceTree = "<group>"; };
-		C95234921E7ECAFB0027C1FE /* Barksnap_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_Logo.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Barksnap_Logo.png"; sourceTree = "<group>"; };
-		C95234931E7ECAFB0027C1FE /* Camera Flip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Camera Flip.png"; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Camera Flip.png"; sourceTree = "<group>"; };
-		C95234941E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-83.5x83.5@2x.png.png"; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Icon-App-83.5x83.5@2x.png.png"; sourceTree = "<group>"; };
-		C95234951E7ECAFB0027C1FE /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Info.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Info.png"; sourceTree = "<group>"; };
-		C95234961E7ECAFB0027C1FE /* Save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Save.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Save.png"; sourceTree = "<group>"; };
-		C95234971E7ECAFB0027C1FE /* SavedCheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SavedCheckMark.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/SavedCheckMark.png"; sourceTree = "<group>"; };
-		C95234981E7ECAFB0027C1FE /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Share.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Share.png"; sourceTree = "<group>"; };
-		C95234991E7ECAFB0027C1FE /* Shutter_Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shutter_Press.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Shutter_Press.png"; sourceTree = "<group>"; };
-		C952349A1E7ECAFB0027C1FE /* Shutter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shutter.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Shutter.png"; sourceTree = "<group>"; };
-		C952349B1E7ECAFB0027C1FE /* Treats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Treats.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/Treats.png"; sourceTree = "<group>"; };
-		C952349C1E7ECAFB0027C1FE /* wavelengths.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wavelengths.png; path = "../../../../Downloads/drive-download-20170319T141417Z-001/wavelengths.png"; sourceTree = "<group>"; };
-		C9C5EBB61E7ED7A5009116CC /* 0000_1 - Open.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "0000_1 - Open.jpg"; path = "../../../../Downloads/drive-download-20170319T141449Z-001/0000_1 - Open.jpg"; sourceTree = "<group>"; };
 		C9C5EBBA1E7EE4FE009116CC /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		C9C5EBBE1E7EF25A009116CC /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
-		C9C5EBC01E7F03B2009116CC /* Barksnap_Logo_URL_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barksnap_Logo_URL_large.png; path = "../../../../Downloads/drive-download-20170319T182120Z-001/Barksnap_Logo_URL_large.png"; sourceTree = "<group>"; };
-		C9C5EBC11E7F03B3009116CC /* Next_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Next_White.png; path = "../../../../Downloads/drive-download-20170319T182120Z-001/Next_White.png"; sourceTree = "<group>"; };
-		C9C5EBC41E7F08DF009116CC /* 0001_2 - Onboarding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "0001_2 - Onboarding.jpg"; path = "../../../../Downloads/drive-download-20170319T184308Z-001/0001_2 - Onboarding.jpg"; sourceTree = "<group>"; };
-		C9C5EBC51E7F08DF009116CC /* 0007_7 - Help.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "0007_7 - Help.jpg"; path = "../../../../Downloads/drive-download-20170319T184308Z-001/0007_7 - Help.jpg"; sourceTree = "<group>"; };
 		C9C5EBC81E7F136A009116CC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C9C8DC151E65E316006DBF7F /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
 		C9C8DC161E65E316006DBF7F /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
@@ -201,41 +157,19 @@
 		C9499B1D1E246C5F0038C948 /* barksnap */ = {
 			isa = PBXGroup;
 			children = (
-				C9C5EBC41E7F08DF009116CC /* 0001_2 - Onboarding.jpg */,
-				C9C5EBC51E7F08DF009116CC /* 0007_7 - Help.jpg */,
-				C9C5EBC01E7F03B2009116CC /* Barksnap_Logo_URL_large.png */,
-				C9C5EBC11E7F03B3009116CC /* Next_White.png */,
-				C9C5EBB61E7ED7A5009116CC /* 0000_1 - Open.jpg */,
-				C90D06A31E27357700B4B171 /* iTunesArtwork@2x.png */,
-				C90D069F1E272FB400B4B171 /* barksnap3.png */,
-				C90D069D1E272EDA00B4B171 /* barksnap2.png */,
-				C90D069B1E272B3300B4B171 /* barksnap.png */,
-				C90D06991E25B50A00B4B171 /* buttonUp.100.png */,
 				C939556B1E2487B000FA80F2 /* whistle.wav */,
 				C9499B1E1E246C5F0038C948 /* AppDelegate.swift */,
 				C9499B201E246C5F0038C948 /* ViewController.swift */,
 				C9499B221E246C5F0038C948 /* Main.storyboard */,
 				C9499B251E246C5F0038C948 /* Assets.xcassets */,
-				C952348F1E7ECAFB0027C1FE /* Back.png */,
-				C95234901E7ECAFB0027C1FE /* Barksnap_B_Icon.png */,
-				C95234911E7ECAFB0027C1FE /* Barksnap_Logo_URL.png */,
-				C95234921E7ECAFB0027C1FE /* Barksnap_Logo.png */,
-				C95234931E7ECAFB0027C1FE /* Camera Flip.png */,
-				C95234941E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png */,
-				C95234951E7ECAFB0027C1FE /* Info.png */,
-				C95234961E7ECAFB0027C1FE /* Save.png */,
-				C95234971E7ECAFB0027C1FE /* SavedCheckMark.png */,
-				C95234981E7ECAFB0027C1FE /* Share.png */,
-				C95234991E7ECAFB0027C1FE /* Shutter_Press.png */,
-				C952349A1E7ECAFB0027C1FE /* Shutter.png */,
-				C952349B1E7ECAFB0027C1FE /* Treats.png */,
-				C952349C1E7ECAFB0027C1FE /* wavelengths.png */,
 				C9499B271E246C5F0038C948 /* LaunchScreen.storyboard */,
 				C9499B2A1E246C5F0038C948 /* Info.plist */,
 				C93955691E246FB000FA80F2 /* ImageViewController.swift */,
 				C9C5EBBA1E7EE4FE009116CC /* HelpViewController.swift */,
 				C9C5EBBE1E7EF25A009116CC /* OnboardViewController.swift */,
 				C93E46471EAD0B820058CC58 /* amazonView.html */,
+				C9181A601EAD2D6300E1F928 /* WebViewViewController.swift */,
+				C9181A621EAD44BC00E1F928 /* amazonscript.js */,
 			);
 			path = barksnap;
 			sourceTree = "<group>";
@@ -398,35 +332,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C95234A41E7ECAFB0027C1FE /* Save.png in Resources */,
 				C9499B291E246C5F0038C948 /* LaunchScreen.storyboard in Resources */,
-				C90D069C1E272B3300B4B171 /* barksnap.png in Resources */,
 				C9499B261E246C5F0038C948 /* Assets.xcassets in Resources */,
 				C9499B241E246C5F0038C948 /* Main.storyboard in Resources */,
-				C95234A01E7ECAFB0027C1FE /* Barksnap_Logo.png in Resources */,
-				C95234A21E7ECAFB0027C1FE /* Icon-App-83.5x83.5@2x.png.png in Resources */,
-				C90D06A41E27357700B4B171 /* iTunesArtwork@2x.png in Resources */,
+				C9181A631EAD44BC00E1F928 /* amazonscript.js in Resources */,
 				C939556C1E2487B000FA80F2 /* whistle.wav in Resources */,
-				C90D06A01E272FB400B4B171 /* barksnap3.png in Resources */,
-				C95234A91E7ECAFB0027C1FE /* Treats.png in Resources */,
-				C90D069E1E272EDA00B4B171 /* barksnap2.png in Resources */,
 				C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */,
-				C9C5EBC31E7F03B3009116CC /* Next_White.png in Resources */,
-				C95234A31E7ECAFB0027C1FE /* Info.png in Resources */,
-				C952349E1E7ECAFB0027C1FE /* Barksnap_B_Icon.png in Resources */,
-				C952349D1E7ECAFB0027C1FE /* Back.png in Resources */,
-				C9C5EBC71E7F08DF009116CC /* 0007_7 - Help.jpg in Resources */,
-				C952349F1E7ECAFB0027C1FE /* Barksnap_Logo_URL.png in Resources */,
-				C90D069A1E25B50A00B4B171 /* buttonUp.100.png in Resources */,
-				C95234AA1E7ECAFB0027C1FE /* wavelengths.png in Resources */,
-				C9C5EBC21E7F03B3009116CC /* Barksnap_Logo_URL_large.png in Resources */,
-				C95234A11E7ECAFB0027C1FE /* Camera Flip.png in Resources */,
-				C9C5EBB71E7ED7A5009116CC /* 0000_1 - Open.jpg in Resources */,
-				C95234A71E7ECAFB0027C1FE /* Shutter_Press.png in Resources */,
-				C9C5EBC61E7F08DF009116CC /* 0001_2 - Onboarding.jpg in Resources */,
-				C95234A81E7ECAFB0027C1FE /* Shutter.png in Resources */,
-				C95234A51E7ECAFB0027C1FE /* SavedCheckMark.png in Resources */,
-				C95234A61E7ECAFB0027C1FE /* Share.png in Resources */,
 				C93E46481EAD0B830058CC58 /* amazonView.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +415,7 @@
 				C9499B211E246C5F0038C948 /* ViewController.swift in Sources */,
 				C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */,
 				C9499B1F1E246C5F0038C948 /* AppDelegate.swift in Sources */,
+				C9181A611EAD2D6300E1F928 /* WebViewViewController.swift in Sources */,
 				C9C5EBBB1E7EE4FE009116CC /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

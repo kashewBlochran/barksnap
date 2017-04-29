@@ -21,18 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0000_1 - Open.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wld-qT-Po3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0000_1 - Open" translatesAutoresizingMaskIntoConstraints="NO" id="Sw0-ZS-nb7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.091838546100000001" green="0.50143522019999998" blue="0.97971922160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wld-qT-Po3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2ir-as-tCL"/>
-                            <constraint firstItem="wld-qT-Po3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QQY-la-ClI"/>
-                            <constraint firstItem="wld-qT-Po3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="TPE-DN-nZH"/>
-                            <constraint firstAttribute="trailing" secondItem="wld-qT-Po3" secondAttribute="trailing" id="Xtx-Sa-ZMt"/>
-                            <constraint firstItem="wld-qT-Po3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bmE-Z1-gk4"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="wld-qT-Po3" secondAttribute="bottom" id="uIV-6L-dHV"/>
+                            <constraint firstItem="Sw0-ZS-nb7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Egr-V8-WBj"/>
+                            <constraint firstItem="Sw0-ZS-nb7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FnQ-Sc-8Fz"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Sw0-ZS-nb7" secondAttribute="bottom" id="MwR-XL-b4h"/>
+                            <constraint firstAttribute="trailing" secondItem="Sw0-ZS-nb7" secondAttribute="trailing" id="zAr-zx-02O"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0000_1 - Open.jpg" width="1080" height="1920"/>
+        <image name="0000_1 - Open" width="1080" height="1920"/>
     </resources>
 </document>

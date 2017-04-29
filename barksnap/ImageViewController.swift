@@ -13,7 +13,6 @@ class ImageViewController: UIViewController, STADelegateProtocol {
     @IBOutlet weak var bar: UIToolbar!
 
     @IBOutlet weak var bannerlogo: UIImageView!
-    var startAppAd: STAStartAppAd?
     var image: UIImage?
     @IBOutlet weak var imageView: UIImageView!
     var watermarkedImage: UIImage?
@@ -31,11 +30,6 @@ class ImageViewController: UIViewController, STADelegateProtocol {
         super.viewDidLoad()
         
         saved.alpha = 0.0
-        
-        //load ad
-        startAppAd = STAStartAppAd()
-        startAppAd!.load(withDelegate: self)
-        
 
        // navigationController?.navigationBar.isHidden = false
        //navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 80.0)
@@ -57,6 +51,10 @@ class ImageViewController: UIViewController, STADelegateProtocol {
             self.watermarkedImage = self.logoToImage(addLogo: logoImage!, inImage: validImage, atPoint: CGPoint(x: 20, y: 20))
         }
     
+    }
+    @IBAction func loadAd(_ sender: Any) {
+        
+        
     }
     
     //watermark image and return
@@ -138,7 +136,7 @@ class ImageViewController: UIViewController, STADelegateProtocol {
         activityViewController.completionWithItemsHandler = {
         
             activity, success, items, error in
-            self.startAppAd!.show()
+            self.performSegue(withIdentifier: "treatSegue", sender: nil)
         
         }
         
@@ -243,6 +241,7 @@ class ImageViewController: UIViewController, STADelegateProtocol {
         present(actionSheet, animated: true, completion: nil)
     }
     
+
     //when save button pressed, save watermarked image, then show ad.
     @IBAction func save(_ sender: UIButton) {
         
@@ -254,10 +253,11 @@ class ImageViewController: UIViewController, STADelegateProtocol {
         }) { (success) in
             UIView.animate(withDuration: 0.3, delay: 1.0, animations: {
                 self.saved.alpha = 0.0
-            }, completion: nil)
+            }) { (success) in
+                self.performSegue(withIdentifier: "treatSegue", sender: nil)
         }
         
-    }
+        }}
     
     //when ad closes...
     func didClose(_ ad: STAAbstractAd!) {
