@@ -34,16 +34,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        performSegue(withIdentifier: "bootstrapSegue", sender: self)
-        
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
-            performSegue(withIdentifier: "onboard", sender: self)
+            //performSegue(withIdentifier: "onboard", sender: self)
         } else {
             print("First launch, setting UserDefault.")
             UserDefaults.standard.set(true, forKey: "launchedBefore")
-            //performSegue(withIdentifier: "onboard2", sender: self)
+            performSegue(withIdentifier: "bootstrapSegue", sender: self)
         }
         
         

@@ -36,6 +36,7 @@
 		C9C8DC2A1E65E3CF006DBF7F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C8DC291E65E3CF006DBF7F /* libz.tbd */; };
 		C9E749311EB4E6F00090587B /* bootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E749301EB4E6F00090587B /* bootstrapViewController.swift */; };
 		C9E749331EB4F7CA0090587B /* Nexa_Free_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */; };
+		C9E749351EDF8D0F0090587B /* UpgradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E749341EDF8D0F0090587B /* UpgradeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		C9C8DC2D1E65E80E006DBF7F /* barksnap-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "barksnap-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9E749301EB4E6F00090587B /* bootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bootstrapViewController.swift; sourceTree = "<group>"; };
 		C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Nexa_Free_Bold.otf; path = ../../../../Downloads/Nexa_Free_Bold.otf; sourceTree = "<group>"; };
+		C9E749341EDF8D0F0090587B /* UpgradeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpgradeViewController.swift; sourceTree = "<group>"; };
 		E1D3563D3A207378DD1A2794 /* Pods-barksnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 				C9181A601EAD2D6300E1F928 /* WebViewViewController.swift */,
 				C9181A621EAD44BC00E1F928 /* amazonscript.js */,
 				C9E749301EB4E6F00090587B /* bootstrapViewController.swift */,
+				C9E749341EDF8D0F0090587B /* UpgradeViewController.swift */,
 			);
 			path = barksnap;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				C939556A1E246FB000FA80F2 /* ImageViewController.swift in Sources */,
 				C9499B1F1E246C5F0038C948 /* AppDelegate.swift in Sources */,
 				C9E749311EB4E6F00090587B /* bootstrapViewController.swift in Sources */,
+				C9E749351EDF8D0F0090587B /* UpgradeViewController.swift in Sources */,
 				C9181A611EAD2D6300E1F928 /* WebViewViewController.swift in Sources */,
 				C9C5EBBB1E7EE4FE009116CC /* HelpViewController.swift in Sources */,
 			);
