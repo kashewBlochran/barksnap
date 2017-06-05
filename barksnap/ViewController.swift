@@ -10,6 +10,7 @@ import UIKit
 import CameraManager
 import AVFoundation
 import MediaPlayer
+import Photos
 
 class ViewController: UIViewController {
 
@@ -17,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     let cameraManager = CameraManager()
     @IBOutlet weak var helpText: UILabel!
+    
+    //var library: PHPhotoLibrary?
     
     let myAttribute = [
         NSForegroundColorAttributeName: UIColor.white,
@@ -34,11 +37,11 @@ class ViewController: UIViewController {
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
-            performSegue(withIdentifier: "onboard", sender: self)
+            //performSegue(withIdentifier: "onboard", sender: self)
         } else {
             print("First launch, setting UserDefault.")
             UserDefaults.standard.set(true, forKey: "launchedBefore")
-            performSegue(withIdentifier: "onboard", sender: self)
+            performSegue(withIdentifier: "bootstrapSegue", sender: self)
         }
         
         
@@ -48,12 +51,6 @@ class ViewController: UIViewController {
             self.cameraButton.alpha = 1.0
         })
         
-        //check system volume
-        let volume = AVAudioSession.sharedInstance().outputVolume;
-        print(volume)
-        
-        //turn volume up
-        (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
 
         //disable nav
         navigationController?.navigationBar.isHidden = false
@@ -66,8 +63,8 @@ class ViewController: UIViewController {
         helpText.attributedText = myAttrString
         
         //camera
-        cameraManager.showAccessPermissionPopupAutomatically = true
-        addCameraToView()
+        cameraManager.showAccessPermissionPopupAutomatically = false
+        
         
         //animation
 //        let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
@@ -80,6 +77,7 @@ class ViewController: UIViewController {
 //        self.helpText.layer.add(pulseAnimation, forKey: nil)
     
     }
+    
 
     var player: AVAudioPlayer?
     
@@ -101,6 +99,18 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        addCameraToView()
+        
+        //turn volume up only if permissions to camera & photos authorized.
+        if PHPhotoLibrary.authorizationStatus() == .authorized {
+            //check system volume
+            let volume = AVAudioSession.sharedInstance().outputVolume;
+            print(volume)
+        
+            //turn volume up
+            (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
+        }
         
 
         cameraButton.setImage(UIImage(named: "Shutter.png"), for: UIControlState.normal)

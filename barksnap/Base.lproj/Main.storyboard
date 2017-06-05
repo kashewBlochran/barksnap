@@ -9,12 +9,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nexa_Free_Bold.otf">
+            <string>NexaBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="dsO-jj-70R">
             <objects>
                 <navigationController id="0FP-pq-qJp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JlS-1r-RHb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JlS-1r-RHb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -25,6 +30,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4j-y3-3Uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-846" y="140"/>
+        </scene>
+        <!--Bootstrap View Controller-->
+        <scene sceneID="9Tt-V1-UR2">
+            <objects>
+                <viewController id="JYq-MA-ggN" customClass="bootstrapViewController" customModule="barksnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1iv-A5-dzI"/>
+                        <viewControllerLayoutGuide type="bottom" id="4dG-ew-K1A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cNj-qN-0QC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial Setup " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzN-41-bFZ">
+                                <rect key="frame" x="77" y="102" width="222" height="38"/>
+                                <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYa-ls-eUM">
+                                <rect key="frame" x="86" y="184" width="202" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="F1B-iS-fCT"/>
+                                    <constraint firstAttribute="height" constant="159" id="itv-04-taz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196078431371" green="0.54509803921568623" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rzN-41-bFZ" firstAttribute="centerX" secondItem="cNj-qN-0QC" secondAttribute="centerX" id="DKk-0L-DgP"/>
+                            <constraint firstItem="rzN-41-bFZ" firstAttribute="top" secondItem="1iv-A5-dzI" secondAttribute="bottom" constant="82" id="Eya-ue-Wxn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HYa-ls-eUM" secondAttribute="trailing" constant="71" id="dib-sj-l6n"/>
+                            <constraint firstItem="HYa-ls-eUM" firstAttribute="top" secondItem="rzN-41-bFZ" secondAttribute="bottom" constant="44" id="qfM-RL-Z3b"/>
+                            <constraint firstItem="HYa-ls-eUM" firstAttribute="centerX" secondItem="cNj-qN-0QC" secondAttribute="centerX" id="rXT-hl-MUh"/>
+                            <constraint firstItem="HYa-ls-eUM" firstAttribute="leading" secondItem="cNj-qN-0QC" secondAttribute="leadingMargin" constant="70" id="zIf-FK-6UH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="failText" destination="HYa-ls-eUM" id="wbb-pV-PiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UO5-7L-ZLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775.20000000000005" y="1025.9370314842579"/>
         </scene>
         <!--Onboard View Controller-->
         <scene sceneID="Xjc-o5-45n">
@@ -133,6 +185,7 @@
                         <outlet property="cameraView" destination="pyA-zE-0Ce" id="Ekg-lp-RYU"/>
                         <outlet property="helpText" destination="YCK-xw-IiV" id="OFL-U2-JTL"/>
                         <segue destination="evu-v5-FrU" kind="presentation" identifier="onboard" id="WaL-Gc-6hl"/>
+                        <segue destination="JYq-MA-ggN" kind="presentation" identifier="bootstrapSegue" id="udF-He-YWB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -223,6 +276,19 @@
                                     <segue destination="hkP-Sp-dti" kind="presentation" identifier="treatSegue" id="HqA-lB-SnE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-6P-8Iy">
+                                <rect key="frame" x="301" y="67" width="58" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="8JW-Lh-srP"/>
+                                    <constraint firstAttribute="height" constant="30" id="BHc-MA-d7G"/>
+                                </constraints>
+                                <state key="normal" title="upgrade">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CfZ-al-Ajf" kind="presentation" id="axf-xW-I6y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -232,9 +298,11 @@
                             <constraint firstItem="7XX-T5-P8P" firstAttribute="leading" secondItem="TGP-Yv-IH0" secondAttribute="leadingMargin" id="B3g-oH-KZp"/>
                             <constraint firstItem="Axt-7V-DCC" firstAttribute="top" secondItem="suA-sp-VHz" secondAttribute="bottom" constant="20" id="BvV-65-xya"/>
                             <constraint firstItem="wIb-0k-4LR" firstAttribute="leading" secondItem="TGP-Yv-IH0" secondAttribute="leadingMargin" constant="51" id="Jyp-4f-esi"/>
+                            <constraint firstItem="Gbt-6P-8Iy" firstAttribute="trailing" secondItem="TGP-Yv-IH0" secondAttribute="trailingMargin" id="QHI-CR-sdY"/>
                             <constraint firstItem="EQN-Ch-FQj" firstAttribute="centerY" secondItem="TGP-Yv-IH0" secondAttribute="centerY" id="TId-L4-68I"/>
                             <constraint firstItem="e88-nb-lGQ" firstAttribute="top" secondItem="TGP-Yv-IH0" secondAttribute="topMargin" constant="10" id="TsG-o0-tTT"/>
                             <constraint firstItem="4qU-lP-EdN" firstAttribute="top" secondItem="TGP-Yv-IH0" secondAttribute="topMargin" constant="16" id="Uc8-8i-TD5"/>
+                            <constraint firstItem="Gbt-6P-8Iy" firstAttribute="top" secondItem="e88-nb-lGQ" secondAttribute="bottom" constant="8" id="Y9P-YN-cOH"/>
                             <constraint firstItem="wIb-0k-4LR" firstAttribute="top" secondItem="e88-nb-lGQ" secondAttribute="bottom" constant="210" id="ZhP-Pq-Vaa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e88-nb-lGQ" secondAttribute="trailing" constant="52" id="a2k-3q-I0i"/>
                             <constraint firstItem="e88-nb-lGQ" firstAttribute="leading" secondItem="7XX-T5-P8P" secondAttribute="trailing" constant="15" id="aaM-9G-IuG"/>
@@ -423,6 +491,70 @@
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="1025.9370314842579"/>
         </scene>
+        <!--Upgrade View Controller-->
+        <scene sceneID="Vwj-lT-NH1">
+            <objects>
+                <viewController id="CfZ-al-Ajf" customClass="UpgradeViewController" customModule="barksnap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gUA-c8-HfG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tbz-Yq-IMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jof-OU-zSa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="upgrade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Td-YY-fF8">
+                                <rect key="frame" x="79" y="28" width="216" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="A5S-9J-Q00"/>
+                                    <constraint firstAttribute="width" constant="216" id="kpd-XB-VJa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="41"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0C-BC-qtv">
+                                <rect key="frame" x="158" y="127" width="59" height="30"/>
+                                <state key="normal" title="Buy now">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buy:" destination="CfZ-al-Ajf" eventType="touchUpInside" id="zp9-FO-4a6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkR-Vp-nJx">
+                                <rect key="frame" x="79" y="174" width="216" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lXe-58-amC"/>
+                                    <constraint firstAttribute="width" constant="216" id="nNF-vj-guy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196079999999" green="0.5450980392" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L0C-BC-qtv" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leadingMargin" constant="142" id="7vt-rH-luf"/>
+                            <constraint firstItem="L0C-BC-qtv" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="Lf2-gz-GXA"/>
+                            <constraint firstItem="2Td-YY-fF8" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="Ocp-zW-rOm"/>
+                            <constraint firstItem="NkR-Vp-nJx" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leadingMargin" constant="63" id="Vrv-e3-psK"/>
+                            <constraint firstItem="L0C-BC-qtv" firstAttribute="top" secondItem="2Td-YY-fF8" secondAttribute="bottom" constant="8" id="bnY-3z-8fF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L0C-BC-qtv" secondAttribute="trailing" constant="142" id="fT4-mK-Y88"/>
+                            <constraint firstItem="NkR-Vp-nJx" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="k7d-et-dL9"/>
+                            <constraint firstItem="NkR-Vp-nJx" firstAttribute="top" secondItem="L0C-BC-qtv" secondAttribute="bottom" constant="17" id="mgu-3f-iU6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NkR-Vp-nJx" secondAttribute="trailing" constant="64" id="qxQ-mB-OsG"/>
+                            <constraint firstItem="2Td-YY-fF8" firstAttribute="top" secondItem="gUA-c8-HfG" secondAttribute="bottom" constant="8" id="uWg-c2-BYu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="NkR-Vp-nJx" id="fTS-6Y-jKD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2x-Bx-NHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.5999999999999" y="1019.640179910045"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0001_2 - Onboarding" width="1080" height="1920"/>
@@ -439,6 +571,6 @@
         <image name="forward" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tfi-kN-Dfx"/>
+        <segue reference="HqA-lB-SnE"/>
     </inferredMetricsTieBreakers>
 </document>
