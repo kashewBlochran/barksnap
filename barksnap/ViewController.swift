@@ -64,17 +64,6 @@ class ViewController: UIViewController {
         
         //camera
         cameraManager.showAccessPermissionPopupAutomatically = false
-        
-        
-        //animation
-//        let pulseAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
-//        pulseAnimation.duration = 1.0
-//        pulseAnimation.toValue = NSNumber(value: 1.0)
-//        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        pulseAnimation.autoreverses = true
-//        pulseAnimation.repeatCount = FLT_MAX
-//        
-//        self.helpText.layer.add(pulseAnimation, forKey: nil)
     
     }
     
