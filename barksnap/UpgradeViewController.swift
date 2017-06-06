@@ -20,6 +20,11 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     var audioPlayerNode: AVAudioPlayerNode!
     var audioFile: AVAudioFile!
     
+    //ui elements
+    @IBOutlet weak var upgradeButton: UIButton!
+    @IBOutlet weak var upgradeText: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     //camera
     let cameraManager = CameraManager()
     @IBOutlet weak var cameraView: UIView!
@@ -28,7 +33,7 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     @IBOutlet weak var sliderBar: UISlider!
     
     //nav
-    let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+    var swipeDown: UISwipeGestureRecognizer!
     
     //dynamic labels
     //@IBOutlet weak var resultLabel: UILabel!
@@ -36,9 +41,82 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     //product integration
     var activeProduct: SKProduct?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        upgradeText.alpha = 0.0
+        upgradeButton.alpha = 0.0
+        sliderBar.alpha = 0.0
+        descriptionLabel.alpha = 0.0
+        
+        
+    
+        //swipe recognition
+        swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeDown.direction = UISwipeGestureRecognizerDirection.down
+        self.view.addGestureRecognizer(swipeDown)
+        
+        //init audio
+        let url = Bundle.main.url(forResource: "whistle", withExtension: "wav")!
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: url)
+            audioPlayer.enableRate = true
+            
+            //create audio engine
+            audioEngine = AVAudioEngine()
+            audioRatePitch = AVAudioUnitTimePitch()
+            audioPlayerNode = AVAudioPlayerNode()
+            
+            audioEngine.attach(audioRatePitch)
+            audioEngine.attach(audioPlayerNode)
+            
+            audioEngine.connect(audioPlayerNode, to: audioRatePitch, format: nil)
+            audioEngine.connect(audioRatePitch, to: audioEngine.outputNode, format: nil)
+            
+            try audioFile = AVAudioFile(forReading: url)
+            try audioEngine.start()
+            
+        } catch {
+            print("error!")
+        }
+        
+        //payments
+        SKPaymentQueue.default().add(self)
+        let productIdentifiers: Set<String> = ["com.bsprotest"]
+        let productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
+        productsRequest.delegate = self
+        productsRequest.start()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //add camera
+        addCameraToView()
+        
+        //fade in labels
+        UIView.animate(withDuration: 0.3, animations: {
+            self.descriptionLabel.alpha = 1.0
+        }) { (success) in
+            UIView.animate(withDuration: 0.3, delay: 0.33, animations: {
+                self.sliderBar.alpha = 1.0
+            }) { (success) in
+                print("done")
+            }
+        }
+
+
+    }
+    
     @IBAction func buy(_ sender: Any) {
         
         if let activeProduct = activeProduct{
+            
+            //disable buttons
+            upgradeText.isEnabled = false
+            upgradeButton.isEnabled = false
+            
+            //initiate payment
             self.view.removeGestureRecognizer(swipeDown)
             print("buying product \(activeProduct.productIdentifier)")
             let payment = SKPayment(product: activeProduct)
@@ -87,6 +165,12 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     @IBAction func buyButton(_ sender: Any) {
         
         if let activeProduct = activeProduct{
+            
+            //disable buttons
+            upgradeText.isEnabled = false
+            upgradeButton.isEnabled = false
+            
+            //initiate payment
             self.view.removeGestureRecognizer(swipeDown)
             print("buying product \(activeProduct.productIdentifier)")
             let payment = SKPayment(product: activeProduct)
@@ -108,7 +192,17 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
             print("Product: \(product.productIdentifier), \(product.localizedTitle), \(product.price.floatValue)")
             
             activeProduct = product
-            //resultLabel.text = activeProduct?.localizedTitle
+            //animate
+            UIView.animate(withDuration: 0.3, animations: {
+                self.upgradeButton.alpha = 1.0
+            }) { (success) in
+                UIView.animate(withDuration: 0.3, delay: 0.33, animations: {
+                    self.upgradeText.alpha = 1.0
+                }) { (success) in
+                    print("done")
+                }
+                
+            }
         }
     }
     
@@ -119,16 +213,36 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
             switch (transaction.transactionState){
                 
             case .purchased:
+                //finish payment
                 SKPaymentQueue.default().finishTransaction(transaction)
                 print("purchased")
+                
+                //reactivate gesture recognizer
                 self.view.addGestureRecognizer(swipeDown)
-                //resultLabel.text = "Purchase complete!"
-                //apply purchase here, store data in user defaults.
+                
+                //set pro flag to true
+                UserDefaults.standard.set(true, forKey: "pro")
+                
+                //update label
+                descriptionLabel.text = "Purchase complete!"
+                
+                //return to previous screen
+                goBack()
+                
             case .failed:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 print("failed")
+                
+                //reactivate gesture recognizer
                 self.view.addGestureRecognizer(swipeDown)
-                //resultLabel.text = "Failed!"
+                
+                //update label
+                descriptionLabel.text = "Purchase failed! Please try again."
+                
+                //reactivate buttons
+                upgradeText.isEnabled = true
+                upgradeButton.isEnabled = true
+                
             default:
                 break
             }
@@ -143,52 +257,7 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
         
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //swipe recognition
-        swipeDown.direction = UISwipeGestureRecognizerDirection.down
-        self.view.addGestureRecognizer(swipeDown)
-  
-        //init audio
-        let url = Bundle.main.url(forResource: "whistle", withExtension: "wav")!
-        
-        do {
-          try audioPlayer = AVAudioPlayer(contentsOf: url)
-          audioPlayer.enableRate = true
-            
-            //create audio engine
-            audioEngine = AVAudioEngine()
-            audioRatePitch = AVAudioUnitTimePitch()
-            audioPlayerNode = AVAudioPlayerNode()
-            
-            audioEngine.attach(audioRatePitch)
-            audioEngine.attach(audioPlayerNode)
-            
-            audioEngine.connect(audioPlayerNode, to: audioRatePitch, format: nil)
-            audioEngine.connect(audioRatePitch, to: audioEngine.outputNode, format: nil)
-            
-            try audioFile = AVAudioFile(forReading: url)
-            try audioEngine.start()
-            
-        } catch {
-            print("error!")
-        }
-        
-        //payments
-        SKPaymentQueue.default().add(self)
-        let productIdentifiers: Set<String> = ["com.bsprotest"]
-        let productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
-        productsRequest.delegate = self
-        productsRequest.start()
-    }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        //add camera
-        addCameraToView()
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

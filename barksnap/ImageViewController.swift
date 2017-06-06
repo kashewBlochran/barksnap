@@ -17,13 +17,14 @@ class ImageViewController: UIViewController, STADelegateProtocol {
     @IBOutlet weak var imageView: UIImageView!
     var watermarkedImage: UIImage?
     @IBOutlet weak var save: UIBarButtonItem!
+    @IBOutlet weak var upgradeLabel: UIButton!
+    @IBOutlet weak var saved: UIImageView!
     
     @IBAction func backButton(_ sender: Any) {
         
         _ = self.navigationController?.popViewController(animated: true)
     
     }
-    @IBOutlet weak var saved: UIImageView!
     
     override func viewDidLoad() {
 
@@ -52,6 +53,21 @@ class ImageViewController: UIViewController, STADelegateProtocol {
         }
     
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //pro?
+        let pro = UserDefaults.standard.bool(forKey: "pro")
+        
+        //if pro: hide upgrade button
+        if pro {
+            
+            upgradeLabel.isHidden = true
+            
+        }
+        
+    }
+    
     @IBAction func loadAd(_ sender: Any) {
         
         
@@ -84,31 +100,6 @@ class ImageViewController: UIViewController, STADelegateProtocol {
             return newImage!
             
     }
-    
-
-//    //watermark image and return
-//    func textToImage(drawText text: NSString, inImage image: UIImage, atPoint point: CGPoint) ->
-//        UIImage {
-//        let textColor = UIColor.white
-//        let textFont = UIFont(name: "Helvetica Bold", size: 200)!
-//        
-//        let scale = UIScreen.main.scale
-//        UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
-//        
-//        let textFontAttributes = [
-//            NSFontAttributeName: textFont,
-//            NSForegroundColorAttributeName: textColor,
-//            ] as [String : Any]
-//        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
-//        
-//        let rect = CGRect(origin: point, size: image.size)
-//        text.draw(in: rect, withAttributes: textFontAttributes)
-//        
-//        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        return newImage!
-//            
-//    }
     
     //press to share an image...
     @IBAction func action(_ sender: UIButton) {
@@ -270,11 +261,6 @@ class ImageViewController: UIViewController, STADelegateProtocol {
     //if help is needed...
     @IBAction func help(_ sender: UIButton) {
         
-        
-//        let alert = UIAlertController(title: "Alert", message: "Aim at your dog, press and hold to emit dog whistle, and release when your dog looks over. Tip: use treats to encourage and reinforce good behavior!", preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
-        
     }
     
 
@@ -282,16 +268,5 @@ class ImageViewController: UIViewController, STADelegateProtocol {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

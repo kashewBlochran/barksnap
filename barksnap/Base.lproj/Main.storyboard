@@ -159,7 +159,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="198" id="kLD-LN-t7j"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="meU-3P-AQ2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -328,6 +328,7 @@
                         <outlet property="bannerlogo" destination="e88-nb-lGQ" id="UTQ-ov-a8H"/>
                         <outlet property="imageView" destination="EQN-Ch-FQj" id="98p-QH-jpe"/>
                         <outlet property="saved" destination="wIb-0k-4LR" id="c6L-SI-7kZ"/>
+                        <outlet property="upgradeLabel" destination="Gbt-6P-8Iy" id="9Rf-S7-GqZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydy-sV-Jvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -372,8 +373,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treat your puppy to something special!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-dT-w1B">
-                                <rect key="frame" x="39" y="157" width="298" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="34.5" y="161" width="308" height="17"/>
+                                <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -630,7 +631,10 @@
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="oQd-FR-gZ4" id="ubX-ze-Tuj"/>
+                        <outlet property="descriptionLabel" destination="iWd-U1-NG2" id="qjd-s2-a8U"/>
                         <outlet property="sliderBar" destination="ASe-hq-pwE" id="Eju-b2-4UY"/>
+                        <outlet property="upgradeButton" destination="bZk-ra-wAq" id="jhI-oQ-kQH"/>
+                        <outlet property="upgradeText" destination="L0C-BC-qtv" id="07c-0Z-Lqv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2x-Bx-NHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -653,6 +657,6 @@
         <image name="forward" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tfi-kN-Dfx"/>
+        <segue reference="HqA-lB-SnE"/>
     </inferredMetricsTieBreakers>
 </document>

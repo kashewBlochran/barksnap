@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     let cameraManager = CameraManager()
     @IBOutlet weak var helpText: UILabel!
     
+    //user defaults
+    
+    
     //var library: PHPhotoLibrary?
     
     let myAttribute = [
@@ -34,22 +37,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        if launchedBefore  {
-            print("Not first launch.")
-            //performSegue(withIdentifier: "onboard", sender: self)
-        } else {
-            print("First launch, setting UserDefault.")
-            UserDefaults.standard.set(true, forKey: "launchedBefore")
-            performSegue(withIdentifier: "bootstrapSegue", sender: self)
-        }
-        
-        
-        
         cameraButton.alpha = 0.0
-        UIView.animate(withDuration: 0.3, animations: {
-            self.cameraButton.alpha = 1.0
-        })
+        helpText.alpha = 0.0
         
 
         //disable nav
@@ -65,6 +54,37 @@ class ViewController: UIViewController {
         //camera
         cameraManager.showAccessPermissionPopupAutomatically = false
     
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
+            self.cameraButton.alpha = 1.0
+        }) { (success) in
+            UIView.animate(withDuration: 0.3, delay: 0.43, animations: {
+                self.helpText.alpha = 1.0
+            }) { (success) in
+                print("done")
+            }
+            
+        }
+
+        
+        let pro = UserDefaults.standard.bool(forKey: "pro")
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
+        if launchedBefore  {
+            print("Not first launch.")
+            print("pro version (not first launch): \(pro)")
+            //performSegue(withIdentifier: "onboard", sender: self)
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            UserDefaults.standard.set(false, forKey: "pro")
+            print("pro version (inside first launch sequence): \(pro)")
+            performSegue(withIdentifier: "bootstrapSegue", sender: self)
+        }
+        
     }
     
 
