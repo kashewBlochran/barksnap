@@ -18,6 +18,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     let cameraManager = CameraManager()
     @IBOutlet weak var helpText: UILabel!
+    @IBOutlet weak var slider: UISlider!
+    
+    //universal audio variables
+    var audioPlayer: AVAudioPlayer!
+    var audioRatePitch: AVAudioUnitTimePitch!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var audioFile: AVAudioFile!
+    
+    //old audio var
+    var player: AVAudioPlayer?
+
     
     //user defaults
     
@@ -37,9 +49,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //fade all
         cameraButton.alpha = 0.0
         helpText.alpha = 0.0
+        slider.alpha = 0.0
         
+        //change slider image
+        //slider thumb image
+        slider.setThumbImage(UIImage(named: "ShutterSmall"), for: UIControlState.normal)
 
         //disable nav
         navigationController?.navigationBar.isHidden = false
@@ -47,28 +64,61 @@ class ViewController: UIViewController {
         //don't auto-save images
         cameraManager.writeFilesToPhoneLibrary = false
         
-        //help text
+        //init help text
          myAttrString = NSAttributedString(string: "Press and hold!", attributes: myAttribute)
         helpText.attributedText = myAttrString
         
-        //camera
+        //disable auto permissions (handled elsewhere)
         cameraManager.showAccessPermissionPopupAutomatically = false
+        
+        //init audio
+        let url = Bundle.main.url(forResource: "whistle", withExtension: "wav")!
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: url)
+            audioPlayer.enableRate = true
+            
+            //create audio engine
+            audioEngine = AVAudioEngine()
+            audioRatePitch = AVAudioUnitTimePitch()
+            audioPlayerNode = AVAudioPlayerNode()
+            audioEngine.attach(audioRatePitch)
+            audioEngine.attach(audioPlayerNode)
+            audioEngine.connect(audioPlayerNode, to: audioRatePitch, format: nil)
+            audioEngine.connect(audioRatePitch, to: audioEngine.outputNode, format: nil)
+            try audioFile = AVAudioFile(forReading: url)
+            try audioEngine.start()
+            audioPlayerNode.scheduleFile(audioFile, at: nil, completionHandler: nil)
+            
+        } catch {
+            print("error!")
+        }
+        
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        addCameraToView()
+        
+        //turn volume up only if permissions to camera & photos authorized.
+        if PHPhotoLibrary.authorizationStatus() == .authorized {
+            //check system volume
+            let volume = AVAudioSession.sharedInstance().outputVolume;
+            print(volume)
+            
+            //turn volume up
+            (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
+        }
+        
+        
+        cameraButton.setImage(UIImage(named: "Shutter.png"), for: UIControlState.normal)
+        cameraButton.isEnabled = true
+        navigationController?.navigationBar.isHidden = true
+        cameraManager.resumeCaptureSession()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        UIView.animate(withDuration: 0.3, delay: 0.1, animations: {
-            self.cameraButton.alpha = 1.0
-        }) { (success) in
-            UIView.animate(withDuration: 0.3, delay: 0.43, animations: {
-                self.helpText.alpha = 1.0
-            }) { (success) in
-                print("done")
-            }
-            
-        }
-
         
         let pro = UserDefaults.standard.bool(forKey: "pro")
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
@@ -85,57 +135,109 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "bootstrapSegue", sender: self)
         }
         
-    }
-    
-
-    var player: AVAudioPlayer?
-    
-    func playSound() {
-        let url = Bundle.main.url(forResource: "whistle", withExtension: "wav")!
-        
-        //from site
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
+        if pro == true {
             
-            player.prepareToPlay()
-            player.play()
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        addCameraToView()
-        
-        //turn volume up only if permissions to camera & photos authorized.
-        if PHPhotoLibrary.authorizationStatus() == .authorized {
-            //check system volume
-            let volume = AVAudioSession.sharedInstance().outputVolume;
-            print(volume)
-        
-            //turn volume up
-            (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
-        }
-        
+            //fade regular button
+            cameraButton.alpha = 0.0
+            
+            //deactivate regular button
+            cameraButton.isEnabled = false
+            
+            //enable slider
+            slider.isEnabled = true
+            
+            //fade in slider
+            UIView.animate(withDuration: 0.3, delay: 0.0, animations: {
+                self.slider.alpha = 1.0
+            }) { (success) in
+                print("slider faded in.")
+            }
 
-        cameraButton.setImage(UIImage(named: "Shutter.png"), for: UIControlState.normal)
-        cameraButton.isEnabled = true
-        navigationController?.navigationBar.isHidden = true
-        cameraManager.resumeCaptureSession()
+        } else {
+            
+            //fade slider
+            slider.alpha = 0.0
+            
+            //deactivate slider
+            slider.isEnabled = false
+            
+            //fade in regular button and help text.
+            UIView.animate(withDuration: 0.3, delay: 0.0, animations: {
+                self.cameraButton.alpha = 1.0
+            }) { (success) in
+                UIView.animate(withDuration: 0.3, delay: 0.43, animations: {
+                    self.helpText.alpha = 1.0
+                }) { (success) in
+                    print("done")
+                }
+            }
+        }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        cameraManager.stopCaptureSession()
+    //press regular button
+    func playSound() {
+        
+        audioPlayerNode.play()
+        
     }
     
+    func stopSound(){
+        
+       audioPlayerNode.stop()
+        
+    }
     
-    fileprivate func addCameraToView()
-    {
+    //press pro slider
+    @IBAction func sliderPress(_ sender: Any) {
+        
+        //schedule file
+        audioPlayerNode.scheduleFile(audioFile, at: nil, completionHandler: nil)
+        
+        //play
+        playSound()
+        
+    }
+    
+    //release pro slider (finger inside)
+    @IBAction func sliderReleaseInside(_ sender: Any) {
+        
+        //disable slider
+        slider.isEnabled = false
+        
+        //stop sound
+        stopSound()
+        
+        //take picture
+        takePicture()
+        
+    }
+    
+    //release pro slider (finger outside)
+    @IBAction func sliderReleaseOutside(_ sender: Any) {
+        
+        //disable slider
+        slider.isEnabled = false
+        
+        //stop sound
+        stopSound()
+        
+        //take picture
+        takePicture()
+        
+    }
+    
+    //pro slider value change
+    @IBAction func sliderValueChange(_ sender: Any) {
+        
+        print(slider.value)
+        
+        audioRatePitch.pitch = slider.value*750
+        audioRatePitch.rate = 1.0
+        audioPlayerNode.play()
+        
+    }
+    
+    fileprivate func addCameraToView() {
         
         print(cameraManager.addPreviewLayerToView(self.cameraView))
         
@@ -143,9 +245,13 @@ class ViewController: UIViewController {
     
     @IBAction func buttonDown(_ sender: UIButton) {
         
-        print("button pressed")
+        //play sound
         playSound()
+        
+        //change image to button pressed
         cameraButton.setImage(UIImage(named: "Shutter_Press.png"), for: UIControlState.normal)
+        
+        //change help text to "release"
         myAttrString = NSAttributedString(string: "Release!", attributes: myAttribute)
         helpText.attributedText = myAttrString
         
@@ -153,15 +259,40 @@ class ViewController: UIViewController {
     
     @IBAction func buttonRelease(_ sender: UIButton) {
         
+        //change image back to normal
         cameraButton.setImage(UIImage(named: "Shutter.png"), for: UIControlState.normal)
         
-        print("button released")
         //stop sound
-        player?.stop()
+        stopSound()
         
+        //disable button
         cameraButton.isEnabled = false
         
+        //hide help text
         helpText.isHidden = true
+        
+        //snap picture
+        takePicture()
+        
+//        cameraManager.capturePictureWithCompletion({ (image, error) -> Void in
+//            if let errorOccured = error {
+//                self.cameraManager.showErrorBlock("Error occurred", errorOccured.localizedDescription)
+//            }
+//            else {
+//                let vc: ImageViewController? = self.storyboard?.instantiateViewController(withIdentifier: "ImageVC") as? ImageViewController
+//                if let validVC: ImageViewController = vc {
+//                    if let capturedImage = image {
+//                        validVC.image = capturedImage
+//                        self.navigationController?.pushViewController(validVC, animated: true)
+//                    }
+//                }
+//            }
+//        })
+//        
+        
+    }
+    
+    func takePicture(){
         
         cameraManager.capturePictureWithCompletion({ (image, error) -> Void in
             if let errorOccured = error {
@@ -178,7 +309,11 @@ class ViewController: UIViewController {
             }
         })
         
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        cameraManager.stopCaptureSession()
     }
     
     override func didReceiveMemoryWarning() {

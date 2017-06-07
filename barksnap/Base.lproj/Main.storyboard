@@ -164,16 +164,29 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C8e-e6-lFG">
+                                <rect key="frame" x="14" y="594" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderPress:" destination="BYZ-38-t0r" eventType="touchDown" id="gf5-8v-Jev"/>
+                                    <action selector="sliderReleaseInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dag-kJ-35o"/>
+                                    <action selector="sliderReleaseOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="PP3-TL-326"/>
+                                    <action selector="sliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ryy-1A-rt1"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="C8e-e6-lFG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2qs-4G-LWi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pyA-zE-0Ce" secondAttribute="bottom" id="9Mb-aE-tGF"/>
                             <constraint firstItem="pyA-zE-0Ce" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DTO-Sb-oKR"/>
                             <constraint firstItem="pyA-zE-0Ce" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LBX-uW-91c"/>
                             <constraint firstItem="pyA-zE-0Ce" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MhS-Pc-66s"/>
                             <constraint firstItem="1B0-IS-4FV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXh-KG-u8t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C8e-e6-lFG" secondAttribute="bottom" constant="43" id="Wlw-wD-0SY"/>
                             <constraint firstItem="1B0-IS-4FV" firstAttribute="top" secondItem="YCK-xw-IiV" secondAttribute="bottom" constant="8" id="Wyo-gJ-nx2"/>
                             <constraint firstItem="YCK-xw-IiV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X9e-fA-ibt"/>
+                            <constraint firstItem="C8e-e6-lFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyE-RP-ytG"/>
+                            <constraint firstItem="C8e-e6-lFG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iDn-J8-hBS"/>
                             <constraint firstAttribute="trailing" secondItem="pyA-zE-0Ce" secondAttribute="trailing" id="ir0-QL-lvi"/>
                             <constraint firstItem="pyA-zE-0Ce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mIs-sJ-qN7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1B0-IS-4FV" secondAttribute="bottom" constant="20" id="y3p-NN-HSj"/>
@@ -184,6 +197,7 @@
                         <outlet property="cameraButton" destination="1B0-IS-4FV" id="PeB-1b-Mfe"/>
                         <outlet property="cameraView" destination="pyA-zE-0Ce" id="Ekg-lp-RYU"/>
                         <outlet property="helpText" destination="YCK-xw-IiV" id="OFL-U2-JTL"/>
+                        <outlet property="slider" destination="C8e-e6-lFG" id="DgK-HM-17H"/>
                         <segue destination="evu-v5-FrU" kind="presentation" identifier="onboard" id="WaL-Gc-6hl"/>
                         <segue destination="JYq-MA-ggN" kind="presentation" identifier="bootstrapSegue" id="udF-He-YWB"/>
                     </connections>
@@ -373,7 +387,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treat your puppy to something special!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-dT-w1B">
-                                <rect key="frame" x="34.5" y="161" width="308" height="17"/>
+                                <rect key="frame" x="33.5" y="161" width="308" height="17"/>
                                 <fontDescription key="fontDescription" name="NexaBold" family="Nexa Bold" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -586,7 +600,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-hq-pwE">
-                                <rect key="frame" x="77" y="607" width="220" height="31"/>
+                                <rect key="frame" x="14" y="607" width="347" height="31"/>
                                 <connections>
                                     <action selector="slider:" destination="CfZ-al-Ajf" eventType="valueChanged" id="Ol2-Qw-MiV"/>
                                     <action selector="sliderTouchDown:" destination="CfZ-al-Ajf" eventType="touchDown" id="AhF-fZ-y75"/>
@@ -600,10 +614,9 @@
                             <constraint firstAttribute="trailing" secondItem="YNo-CN-dmD" secondAttribute="trailing" id="3R4-xd-g1s"/>
                             <constraint firstItem="2Td-YY-fF8" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="3l4-k1-io4"/>
                             <constraint firstItem="bZk-ra-wAq" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="3oR-SZ-zLK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ASe-hq-pwE" secondAttribute="trailing" constant="64" id="4TQ-21-8hj"/>
                             <constraint firstItem="YNo-CN-dmD" firstAttribute="centerY" secondItem="jof-OU-zSa" secondAttribute="centerY" id="7hW-RS-XOY"/>
+                            <constraint firstItem="ASe-hq-pwE" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="BAf-8N-AXo"/>
                             <constraint firstItem="2Td-YY-fF8" firstAttribute="trailing" secondItem="jof-OU-zSa" secondAttribute="trailingMargin" id="BVC-YF-0Kk"/>
-                            <constraint firstItem="ASe-hq-pwE" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="CHV-PL-qEt"/>
                             <constraint firstItem="2Td-YY-fF8" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leadingMargin" id="EWB-YD-nmt"/>
                             <constraint firstItem="YNo-CN-dmD" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="Eww-aZ-sHC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L0C-BC-qtv" secondAttribute="trailing" constant="62" id="M7n-o6-ALL"/>
@@ -612,6 +625,7 @@
                             <constraint firstItem="YNo-CN-dmD" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leading" id="Nez-VW-Kv8"/>
                             <constraint firstItem="L0C-BC-qtv" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leadingMargin" constant="61" id="Pva-nv-2Ms"/>
                             <constraint firstItem="Tbz-Yq-IMa" firstAttribute="top" secondItem="iWd-U1-NG2" secondAttribute="bottom" constant="57" id="SRk-mb-91G"/>
+                            <constraint firstItem="Tbz-Yq-IMa" firstAttribute="top" secondItem="ASe-hq-pwE" secondAttribute="bottom" constant="30" id="TeE-OB-Xge"/>
                             <constraint firstItem="L0C-BC-qtv" firstAttribute="centerX" secondItem="jof-OU-zSa" secondAttribute="centerX" id="acM-ne-Muy"/>
                             <constraint firstItem="oQd-FR-gZ4" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leading" id="bef-8v-Vkk"/>
                             <constraint firstItem="bZk-ra-wAq" firstAttribute="top" secondItem="2Td-YY-fF8" secondAttribute="bottom" constant="185" id="cUF-Ri-w2f"/>
@@ -624,9 +638,9 @@
                             <constraint firstAttribute="trailing" secondItem="oQd-FR-gZ4" secondAttribute="trailing" id="iBp-rT-NnH"/>
                             <constraint firstItem="iWd-U1-NG2" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leadingMargin" id="nr2-ms-ivz"/>
                             <constraint firstItem="Tbz-Yq-IMa" firstAttribute="top" secondItem="oQd-FR-gZ4" secondAttribute="bottom" id="o9e-vR-D8S"/>
-                            <constraint firstItem="Tbz-Yq-IMa" firstAttribute="top" secondItem="ASe-hq-pwE" secondAttribute="bottom" constant="30" id="tEx-MM-vbZ"/>
+                            <constraint firstItem="ASe-hq-pwE" firstAttribute="trailing" secondItem="jof-OU-zSa" secondAttribute="trailingMargin" id="tjS-EK-LbI"/>
+                            <constraint firstItem="ASe-hq-pwE" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leadingMargin" id="uvX-Y4-iuj"/>
                             <constraint firstItem="L0C-BC-qtv" firstAttribute="top" secondItem="2Td-YY-fF8" secondAttribute="bottom" constant="236" id="wQd-aX-iRh"/>
-                            <constraint firstItem="ASe-hq-pwE" firstAttribute="leading" secondItem="jof-OU-zSa" secondAttribute="leadingMargin" constant="63" id="ycd-zn-E6V"/>
                         </constraints>
                     </view>
                     <connections>

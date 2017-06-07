@@ -37,6 +37,7 @@
 		C9E749311EB4E6F00090587B /* bootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E749301EB4E6F00090587B /* bootstrapViewController.swift */; };
 		C9E749331EB4F7CA0090587B /* Nexa_Free_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */; };
 		C9E749351EDF8D0F0090587B /* UpgradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E749341EDF8D0F0090587B /* UpgradeViewController.swift */; };
+		C9E749371EE7A7470090587B /* ShutterSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E749361EE7A7470090587B /* ShutterSmall.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		C9E749301EB4E6F00090587B /* bootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bootstrapViewController.swift; sourceTree = "<group>"; };
 		C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Nexa_Free_Bold.otf; path = ../../../../Downloads/Nexa_Free_Bold.otf; sourceTree = "<group>"; };
 		C9E749341EDF8D0F0090587B /* UpgradeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpgradeViewController.swift; sourceTree = "<group>"; };
+		C9E749361EE7A7470090587B /* ShutterSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShutterSmall.png; path = ../../../ShutterSmall.png; sourceTree = "<group>"; };
 		E1D3563D3A207378DD1A2794 /* Pods-barksnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barksnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barksnap/Pods-barksnap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 		C9499B1D1E246C5F0038C948 /* barksnap */ = {
 			isa = PBXGroup;
 			children = (
+				C9E749361EE7A7470090587B /* ShutterSmall.png */,
 				C9E749321EB4F7CA0090587B /* Nexa_Free_Bold.otf */,
 				C939556B1E2487B000FA80F2 /* whistle.wav */,
 				C9499B1E1E246C5F0038C948 /* AppDelegate.swift */,
@@ -348,6 +351,7 @@
 				C939556C1E2487B000FA80F2 /* whistle.wav in Resources */,
 				C9C8DC171E65E316006DBF7F /* StartApp.bundle in Resources */,
 				C9E749331EB4F7CA0090587B /* Nexa_Free_Bold.otf in Resources */,
+				C9E749371EE7A7470090587B /* ShutterSmall.png in Resources */,
 				C93E46481EAD0B830058CC58 /* amazonView.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

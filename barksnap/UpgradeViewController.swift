@@ -19,7 +19,7 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var audioFile: AVAudioFile!
-    
+        
     //ui elements
     @IBOutlet weak var upgradeButton: UIButton!
     @IBOutlet weak var upgradeText: UIButton!
@@ -44,12 +44,14 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //start elements faded
         upgradeText.alpha = 0.0
         upgradeButton.alpha = 0.0
         sliderBar.alpha = 0.0
         descriptionLabel.alpha = 0.0
         
-        
+        //slider thumb image
+        sliderBar.setThumbImage(UIImage(named: "ShutterSmall"), for: UIControlState.normal)
     
         //swipe recognition
         swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
