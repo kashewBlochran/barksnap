@@ -96,8 +96,21 @@ class ViewController: UIViewController {
         
     }
     
+    
+    //
+    
+   
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //ensure audio plays even if camera is on silent mode.
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch {
+            print("error - cannot switch to AVAudioSessionCategoryPlayback mode.")
+        }
         
         addCameraToView()
         
@@ -177,6 +190,7 @@ class ViewController: UIViewController {
     //press regular button
     func playSound() {
         
+        audioPlayerNode.scheduleFile(audioFile, at: nil, completionHandler: nil)
         audioPlayerNode.play()
         
     }

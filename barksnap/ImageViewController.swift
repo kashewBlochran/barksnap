@@ -17,8 +17,8 @@ class ImageViewController: UIViewController, STADelegateProtocol {
     @IBOutlet weak var imageView: UIImageView!
     var watermarkedImage: UIImage?
     @IBOutlet weak var save: UIBarButtonItem!
-    @IBOutlet weak var upgradeLabel: UIButton!
     @IBOutlet weak var saved: UIImageView!
+    @IBOutlet weak var upgradeLabel: UIButton!
     
     @IBAction func backButton(_ sender: Any) {
         
@@ -55,6 +55,12 @@ class ImageViewController: UIViewController, STADelegateProtocol {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
         //pro?
         let pro = UserDefaults.standard.bool(forKey: "pro")

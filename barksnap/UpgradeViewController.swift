@@ -85,7 +85,7 @@ class UpgradeViewController: UIViewController, SKProductsRequestDelegate, SKPaym
         
         //payments
         SKPaymentQueue.default().add(self)
-        let productIdentifiers: Set<String> = ["com.bsprotest"]
+        let productIdentifiers: Set<String> = ["bspro"]
         let productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
         productsRequest.delegate = self
         productsRequest.start()
